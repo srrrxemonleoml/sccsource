@@ -1,0 +1,27 @@
+        local character = game.Players.LocalPlayer.Character
+            local rootPart = character and character:FindFirstChild("HumanoidRootPart")
+            if rootPart then
+                rootPart.CFrame = CFrame.new(10394, -113, -10404)
+                wait(0.1)
+                rootPart.CFrame = CFrame.new(10396.37, -426.99, -10406.17)
+                
+                if humanoid then
+                    humanoid.Sit = true
+                    task.wait(0.1)
+                    if rootPart then
+                        rootPart.CFrame = rootPart.CFrame * CFrame.Angles(math.pi * 0.5, 0, 0)
+                    end
+
+                    for _, animation in ipairs(humanoid:GetPlayingAnimationTracks()) do
+                        animation:Stop()
+                    end
+                end
+
+                local player = game.Players.LocalPlayer
+                local humanoid = game.Workspace[player.Name]:FindFirstChild("Humanoid")
+                if humanoid then
+                    humanoid.Health = 0
+                end
+            else
+                warn("HumanoidRootPart no encontrado.")
+            end
