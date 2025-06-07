@@ -1,0 +1,79 @@
+            if Farming then
+                Farming = false
+            else
+                Farming = true
+                repeat
+        local player = game.Players.LocalPlayer
+        
+        repeat
+            wait()
+        until player.Character
+        
+        local player = game.Players.LocalPlayer
+        
+        repeat
+            wait(.5)
+        until player.Character
+        
+        local playerGui = player:FindFirstChild("PlayerGui")
+        if playerGui then
+            local menuScreen = playerGui:FindFirstChild("Menu Screen")
+            if menuScreen and menuScreen:IsA("ScreenGui") then
+                menuScreen.Enabled = false
+                if menuScreen:FindFirstChild("RemoteEvent") then
+                    menuScreen.RemoteEvent:FireServer("Emerald Greatsword")
+                else
+
+                end
+            else
+
+            end
+        else
+
+        end
+        
+        local function performActionAfterSpawn()
+            wait()
+            if player.Character then
+                player.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(-287, 108, -48)
+                wait(0.3)
+        
+                local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+                if humanoid then
+                    humanoid.Health = 0
+                    wait()
+        local player = game.Players.LocalPlayer
+        
+        repeat
+            wait(.2)
+        until player.Character
+        
+        local Axe = player.Backpack:FindFirstChild("Throwing Knife")
+        
+        if Axe then
+            local humanoid = player.Character:FindFirstChild("Humanoid")
+        
+            if humanoid then
+                humanoid:EquipTool(Axe)
+            else
+
+            end
+        else
+
+                   end
+                    wait(0.3)
+                    game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.Backspace, false, game)
+                end
+            else
+
+            end
+        end
+        
+        if player.Character then
+            performActionAfterSpawn()
+        else
+            player.CharacterAdded:Connect(performActionAfterSpawn)
+        end
+         game:GetService("RunService").Heartbeat:Wait()
+                until stopFlag or not Farming
+            end
