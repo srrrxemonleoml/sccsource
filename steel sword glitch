@@ -1,0 +1,11 @@
+local imgayass = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+game.Players.LocalPlayer.PlayerGui["Menu Screen"].RemoteEvent:FireServer("Steel Sword")
+task.wait(.5)
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack["Steel Sword"])
+task.wait(.4)
+game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.Backspace, false, game)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+task.wait(6)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = imgayass
+game.Players.LocalPlayer.PlayerGui["Menu Screen"]:Destroy()
