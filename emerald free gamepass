@@ -1,0 +1,16 @@
+local function autoSelectWeapon()
+    local args = {
+        [1] = "Emerald Greatsword"
+    }
+    
+    game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Menu Screen").RemoteEvent:FireServer(unpack(args))
+    game:GetService("Players").LocalPlayer.PlayerGui["Menu Screen"]:Remove()
+end
+
+game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
+    wait(0.5) 
+    autoSelectWeapon()
+end)
+
+
+autoSelectWeapon()
