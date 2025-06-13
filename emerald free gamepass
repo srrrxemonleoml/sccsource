@@ -1,4 +1,4 @@
-local function autoSelectWeapon()
+local function gaynigga()
     local args = {
         [1] = "Emerald Greatsword"
     }
@@ -9,8 +9,8 @@ end
 
 game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
     wait(0.5) 
-    autoSelectWeapon()
+    gaynigga()
 end)
 
 
-autoSelectWeapon()
+gaynigga()
